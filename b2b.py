@@ -60,7 +60,7 @@ if __name__ == '__main__':
     user_choice = input("Do you want to continue with the script? Type 'q' to quit or press enter to continue: ")
     default_background_to_replace = [192, 248, 200]
     default_background_replacement = [128, 160, 128]
-    default_threshold = 1
+    default_threshold = 0
     default_input = "./input"
     default_output = "./output"
     default_format = 'png'
@@ -72,7 +72,7 @@ if __name__ == '__main__':
         output_folder = output_folder_input if output_folder_input else default_output
         background_colour_input = input("Enter the background colour to replace in RGB format (default: 192 248 200): ")
         background_colour = list(map(int, background_colour_input.split())) if background_colour_input else default_background_to_replace
-        threshold_distance_input = input("Enter the threshold distance for colour similarity (default: 1): ")
+        threshold_distance_input = input("Enter the threshold distance for colour similarity (default: 0): ")
         threshold_distance = int(threshold_distance_input) if threshold_distance_input else default_threshold
         new_colour_input = input("Enter the new colour to replace the background colour in RGB format (default: 128 160 128): ")
         new_colour = list(map(int, new_colour_input.split())) if new_colour_input else default_background_replacement
